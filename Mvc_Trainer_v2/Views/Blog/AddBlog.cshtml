@@ -1,0 +1,28 @@
+﻿@model Sehir
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<form method="post" asp-controller="Blog" asp-action="AddBlog">
+
+  <div class="form-group">
+    <label for="sehirad">Şehir Ad:</label>
+    <input asp-for="@Model.SehirAd" type="text" class="form-control" id="sehirad">
+  </div>
+
+   <div class="form-group">
+    <label for="aciklama">Açıklama:</label>
+    <input asp-for="@Model.Aciklama" type="text" class="form-control" id="aciklama" >
+  </div>
+
+    <div class="form-group">
+    <label for="resim">Şehir Resim:</label>
+    <input asp-for="@Model.ImgSrc" type="text" class="form-control" id="resim">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

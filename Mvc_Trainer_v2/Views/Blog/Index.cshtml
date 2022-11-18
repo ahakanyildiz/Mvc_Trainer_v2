@@ -1,0 +1,23 @@
+﻿@model List<Sehir>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+	@foreach (Sehir item in Model)
+	{
+		<div class="col-3">
+			<div class="card" style="width: 18rem;">
+				<img width="500" height="170" class="card-img-top" src="@item.ImgSrc" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">@item.SehirAd</h5>
+					<p class="card-text">@item.Aciklama</p>
+					<a href="#" class="btn btn-primary">Detayı Gör</a>
+				</div>
+			</div>
+		</div>
+	}
+</div>
+
+
